@@ -2,7 +2,7 @@
 function countArtboards(selection, root) {
     const dialog = document.createElement("dialog");
     const div = document.createElement("div")
-    div.textContent = "Hello XD 🎨"
+    div.textContent = `There are ${root.children.length} artboards 🎨`
 
     const closeButton = document.createElement("button");
     closeButton.textContent = "Close";
