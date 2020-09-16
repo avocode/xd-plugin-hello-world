@@ -1,26 +1,22 @@
-/*
- * Sample plugin scaffolding for Adobe XD.
- *
- * Visit http://adobexdplatform.com/ for API docs and more sample code.
- */
 
+function countArtboards(selection, root) {
+    const dialog = document.createElement("dialog");
+    const div = document.createElement("div")
+    div.textContent = "Hello XD 🎨"
 
-const {Rectangle, Color} = require("scenegraph"); 
+    const closeButton = document.createElement("button");
+    closeButton.textContent = "Close";
+    closeButton.addEventListener("click", (ev)=> {
+        dialog.close();
+    });
 
-function rectangleHandlerFunction(selection) { 
-
-    const newElement = new Rectangle(); 
-    newElement.width = 100;
-    newElement.height = 50;
-    newElement.fill = new Color("Purple");
-
-    selection.insertionParent.addChild(newElement);
-    newElement.moveInParentCoordinates(100, 100);
-
+    dialog.appendChild(div)
+    dialog.appendChild(closeButton)
+    document.body.appendChild(dialog).showModal()
 }
 
 module.exports = {
     commands: {
-        createRectangle: rectangleHandlerFunction
+        countArtboards,
     }
 };

@@ -1,5 +1,5 @@
 {
-  "name" : "215157 4566206088344565085 XD plugin",
+  "name" : "My Design Stats",
   "host" : {
     "app" : "XD",
     "minVersion" : "21.0"
@@ -15,9 +15,9 @@
     "height" : 48
   } ],
   "uiEntryPoints" : [ {
-    "label" : "Create Rectangle",
+    "label" : "Count Artboards",
     "type" : "menu",
-    "commandId" : "createRectangle"
+    "commandId" : "countArtboards"
   } ],
   "version" : "0.0.1"
 }
